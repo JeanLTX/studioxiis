@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const btn = contactForm.querySelector('button');
             const originalText = btn.innerText;
-            
+
             btn.innerText = 'Enviando...';
             btn.disabled = true;
 
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function initTestimonials() {
         const container = document.getElementById('cards-container');
         if (!container) return;
-        
+
         container.classList.add('twitter-testimonials-container');
         container.classList.remove('cards-container'); // cleanup old class
 
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Carlos",
                 username: "Carlos P.",
                 handle: "@carlos_ceo",
-                content: "Profissionais incríveis. As fotos corporativas deram outra cara para minha empresa e meu personal branding no LinkedIn decolou. O resultado final é de altíssimo padrão! 💼🚀",
+                content: "Profissionais incríveis. As fotos corporativas deram outra cara para minha empresa e meu personal branding no LinkedIn decolou.",
                 date: "Fev 28, 2024",
                 verified: true,
                 likes: 89,
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 retweets: 34
             }
         ];
-        
+
         // Reverse order so index 0 is Back, 1 is Middle, 2 is Front
         testimonials.reverse();
 
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.className = 'twitter-card';
             card.setAttribute('data-index', index);
             card.style.zIndex = index; // 0, 1, 2 = back, middle, front
-            
+
             card.innerHTML = `
                 <div class="tc-header">
                     <div class="tc-avatar"><img src="${test.avatar}" alt="${test.username}"></div>
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
             `;
-            
+
             cards.push(card);
             container.appendChild(card);
         });
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation(); // Previne que o evento suba para outros listeners
-                
+
                 const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
                 if (isTouchDevice) {
                     if (!card.classList.contains('active-tap')) {
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-    
+
     // Initialize standard elements on DOM Load
     initTestimonials();
 
