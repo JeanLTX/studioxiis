@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrato Corporativo | Studio Xiis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L13.5 9.5L21 11L13.5 12.5L12 20L10.5 12.5L3 11L10.5 9.5L12 2Z"/></svg>
+                <div class="logo-text">
+                    <span class="studio-text">STUDIO</span><span class="xiis-text">XIIS</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <div class="menu-close" id="mobile-menu-close">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </div>
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="index.html#portfolio">Portfólio</a></li>
+                <li><a href="index.html#projetos" class="active">Projetos</a></li>
+                <li><a href="index.html#depoimentos">Depoimentos</a></li>
+                <div class="mobile-menu-divider"></div>
+                <li><a href="index.html#contato" class="btn-nav-contato">Contato</a></li>
+            </ul>
+            <div class="mobile-nav-actions">
+                <a href="index.html#contato" class="btn-mobile-contato">Contato</a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Swup Container -->
+    <main id="swup" class="transition-fade">
+        <section class="section-padding pt-10" style="padding-top: 150px;">
+            <div class="container text-center">
+                <h1 class="section-title">Equipe Inovação Tech</h1>
+                <p class="subtitle mb-4">Profissionalismo e Elegância em cada detalhe.</p>
+                <div class="divider mx-auto" style="margin: 0 auto 3rem;"></div>
+                
+                <img src="assets/corporate.png" alt="Corporativo" style="width:100%; max-height:600px; object-fit:cover; border-radius:12px; margin-bottom:2rem;">
+                
+                <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+                    <p>Produção voltada para reforçar o personal branding de executivos e empresas da área de tecnologia. Focamos em uma iluminação assertiva e ângulos de liderança.</p>
+                    <br>
+                    <a href="index.html#projetos" class="btn btn-solid">&larr; Voltar para Projetos</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <div class="logo-small">STUDIO XIIS</div>
+            <p>&copy; 2024 Studio Xiis Fotografia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swup@4"></script>
+    <script src="script.js"></script>
+</body>
+</html>
