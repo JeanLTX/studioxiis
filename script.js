@@ -172,8 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cards = [];
 
         testimonials.forEach((test, index) => {
-            const card = document.createElement('a');
-            card.href = "#";
+            const card = document.createElement('div');
             card.className = 'twitter-card';
             card.setAttribute('data-index', index);
             card.style.zIndex = index; // 0, 1, 2 = back, middle, front
@@ -218,16 +217,22 @@ document.addEventListener('DOMContentLoaded', () => {
             card.addEventListener('mouseenter', () => updateHover(idx));
             card.addEventListener('mouseleave', () => updateHover(null));
 
-            // Mobile click logic
+            // Click logic
             card.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation(); // Previne que o evento suba para outros listeners
+                
                 const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
                 if (isTouchDevice) {
                     if (!card.classList.contains('active-tap')) {
-                        e.preventDefault();
                         cards.forEach(c => c.classList.remove('active-tap'));
                         card.classList.add('active-tap');
                         updateHover(idx);
                     }
+                } else {
+                    cards.forEach(c => c.classList.remove('active-tap'));
+                    card.classList.add('active-tap');
+                    updateHover(idx);
                 }
             });
         });
